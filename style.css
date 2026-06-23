@@ -243,3 +243,89 @@ body.big-birthday-boom::before {
     opacity: 0;
   }
 }
+
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.9), transparent 35%),
+    linear-gradient(135deg, #1d2b64, #f8cdda, #ffd166);
+}
+
+.intro-card {
+  max-width: 650px;
+  padding: 42px 34px;
+  border-radius: 32px;
+  text-align: center;
+  color: #3b234a;
+  background: rgba(255, 248, 230, 0.94);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.35);
+  border: 4px solid rgba(255,255,255,0.8);
+  animation: introFloat 3s ease-in-out infinite;
+}
+
+.sparkles {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro-card h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #b83280;
+}
+
+.intro-card h2 {
+  margin-top: 8px;
+  color: #5f3dc4;
+}
+
+.intro-card p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+#enterGameBtn {
+  margin-top: 18px;
+  font-size: 1.2rem;
+  padding: 16px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff69b4, #ffd166);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+#enterGameBtn:hover {
+  transform: scale(1.05);
+}
+
+.intro-screen.hidden {
+  display: none;
+}
+
+@keyframes introFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 700px) {
+  .intro-card {
+    padding: 30px 22px;
+  }
+
+  .intro-card h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-card p {
+    font-size: 1rem;
+  }
+}
