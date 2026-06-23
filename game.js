@@ -574,3 +574,11 @@ restartBtn.addEventListener('click', resetGame);
 soundBtn.addEventListener('click', toggleSound);
 
 loop();
+
+const introScreen = document.getElementById('introScreen');
+const enterGameBtn = document.getElementById('enterGameBtn');
+
+enterGameBtn.addEventListener('click', () => {
+  introScreen.classList.add('hidden');
+  startGame();
+});
